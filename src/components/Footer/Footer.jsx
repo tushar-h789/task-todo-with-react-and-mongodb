@@ -1,12 +1,10 @@
-import { RiAttachment2, RiWechatLine } from "react-icons/ri";
-import Modal from "../Modal/Modal";
+import { RiWechatLine } from "react-icons/ri";
+import AttachmentFiles from "../AttachmentFiles/AttachmentFiles";
 
 const Footer = () => {
-
-
   return (
-    <div className="flex items-center gap-2">
-        {/* footer photo start */}
+    <div className="flex items-center gap-2 w-[500px]">
+      {/* footer photo start */}
       <div className="flex items-center gap-2">
         <img
           className="w-10 rounded-full"
@@ -33,15 +31,7 @@ const Footer = () => {
       </button>
 
       {/* attachments add and count */}
-      <div className="flex items-center gap-2 bg-slate-100 px-1 py-2 rounded-lg">
-        <label>
-        <RiAttachment2  className="text-3xl cursor-pointer" modal="my_modal_2"/>
-        <input type="file" name="" id="" className="hidden"/>
-        </label>
-        {/* onClick={() => document.getElementById("my_modal_2").showModal()} */}
-        <p>25</p>
-        <Modal/>
-      </div>
+      <AttachmentFiles/>
 
       {/* date show */}
       <div className="bg-slate-100">
