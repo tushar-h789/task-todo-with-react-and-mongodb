@@ -1,13 +1,13 @@
-import Body from "../../components/Body/Body"
-import Header from "../../components/Header/Header"
+import Body from "../../components/Body/Body";
+import Header from "../../components/Header/Header";
 
 const Completed = () => {
   return (
     <div className="w-[500px] relative border bg-slate-100 ">
       <div className="absolute">
-      <Header title="Completed" count="0" />
+          <Header title="Completed" count="0" />
       </div>
-      <div className=" h-screen my-16 overflow-auto">
+      <div className=" h-screen my-16 overflow-auto overflow-x-hidden">
         <Body />
         <Body />
         <Body />
@@ -16,7 +16,7 @@ const Completed = () => {
         <Body />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Completed
+export default Completed;

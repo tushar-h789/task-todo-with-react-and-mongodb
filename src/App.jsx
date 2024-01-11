@@ -9,11 +9,11 @@ const App = () => {
   return (
     <div className="px-4 flex gap-2 items-center">
       <Incomplete />
-      {/* <Todo/>
+      <Todo/>
       <Doing/>
       <Completed/>
       <UnderReview/>
-      <Overd/> */}
+      <Overd/>
     </div>
   );
 };
