@@ -12,8 +12,10 @@ const AttachmentFiles = () => {
   const { data: photos = [], refetch } = useQuery({
     queryKey: ["picture"],
     queryFn: async () => {
-      const res = await axios.get("http://localhost:8000/photo");
-      console.log(res.data);
+      const res = await axios.get(
+        "https://task-for-frontend-developer-server.vercel.app/photo"
+      );
+      // console.log(res.data);
       return res.data;
     },
   });
@@ -42,7 +44,10 @@ const AttachmentFiles = () => {
         };
 
         // Send data for each file individually to your server
-        const imageUpload = await axios.post("http://localhost:8000/photo", imgData);
+        const imageUpload = await axios.post(
+          "https://task-for-frontend-developer-server.vercel.app/photo",
+          imgData
+        );
 
         if (imageUpload.data.insertedId) {
           // Log success message and show a notification
@@ -52,7 +57,7 @@ const AttachmentFiles = () => {
             icon: "success",
             title: "Photo uploaded",
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
           });
         }
       }
